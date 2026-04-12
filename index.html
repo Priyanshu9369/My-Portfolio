@@ -4,507 +4,335 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta name="description" content="Priyanshu Yadav — CSE student at Galgotias University. Web development, Python &amp; Java, AI/ML. Portfolio and projects." />
+  <title>Priyanshu Yadav | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://fonts.googleapis.com/css?family=Lato:300"></script>
-
-
-  <style>
-    @font-face {
-      font-family: "MyCustomFont";
-      src: url("/fonts/Mainlux-Light.otf") format("woff2");
-    }
-
-    .font-my-custom-font {
-      font-family: "MyCustomFont", sans-serif;
-    }
-
-    .adjust {
-      max-width: fit-content;
-      max-height: fit-content;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .gradient-text {
-      background: linear-gradient(to right, #ff045c, #ff009d);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    body {
-      background: #000000;
-    }
-
-
-    .shimmer {
-      font-family: "MyCustomFont", Arial, sans-serif;
-      font-weight: 300;
-      font-size: 3em;
-      margin: 0 auto;
-      padding: 0 0 0 0;
-      display: inline;
-      margin-bottom: 0;
-
-    }
-
-    .shimmer {
-      text-align: center;
-      background: -webkit-gradient(linear, left top, right top, from(#cb0954), to(#fbb45e), color-stop(0.5, #fc02f8));
-      background: -moz-gradient(linear, left top, right top, from(#b20de0), to(#ffd501), color-stop(0.5, #ec0995));
-      background: gradient(linear, left top, right top, from(#cb0954), to(#fbb45e), color-stop(0.5, #fc02f8));
-      -webkit-background-size: 125px 100%;
-      -moz-background-size: 125px 100%;
-      background-size: 125px 100%;
-      -webkit-background-clip: text;
-      -moz-background-clip: text;
-      background-clip: text;
-      -webkit-animation-name: shimmer;
-      -moz-animation-name: shimmer;
-      animation-name: shimmer;
-      -webkit-animation-duration: 2s;
-      -moz-animation-duration: 2s;
-      animation-duration: 2s;
-      -webkit-animation-iteration-count: infinite;
-      -moz-animation-iteration-count: infinite;
-      animation-iteration-count: 2;
-      animation-fill-mode: forwards;
-      background-repeat: no-repeat;
-      background-position: 0 0;
-      background-color: rgb(204, 0, 255);
-      animation-delay: 0.5s;
-
-    }
-
-    @-moz-keyframes shimmer {
-      0% {
-        background-position: top left;
-
-      }
-
-      100% {
-        background-position: top right;
-      }
-    }
-
-    @-webkit-keyframes shimmer {
-      0% {
-        background-position: top left;
-      }
-
-      100% {
-        background-position: top right;
-      }
-    }
-
-    @-o-keyframes shimmer {
-      0% {
-        background-position: top left;
-      }
-
-      100% {
-        background-position: top right;
-      }
-    }
-
-    @keyframes shimmer {
-      0% {
-        background-position: top left;
-      }
-
-      100% {
-        background-position: top right;
-      }
-    }
-
-    .color-change-3x {
-      -webkit-animation: color-change-3x 2s linear infinite alternate both;
-      animation: color-change-3x 2s linear infinite alternate both;
-    }
-
-    @-webkit-keyframes color-change-3x {
-      0% {
-        background: #ae00ff;
-      }
-
-      100% {
-        background: #ff0167;
-      }
-    }
-
-    @keyframes color-change-3x {
-      0% {
-        background: #ae00ff;
-      }
-
-      100% {
-        background: #ff0167;
-      }
-    }
-
-
-
-
-    .container {
-      position: relative;
-    }
-
-    .swipable-element {
-      position: absolute;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .container:hover .swipable-element {
-      transform: translateX(200px);
-      /* Adjust translation value as needed */
-    }
-
-    .red-circle {
-      width: 20px;
-      height: 20px;
-      background-color: red;
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    /* Add more media queries for smaller screen sizes */
-  </style>
-  <title>Personal Landing Page</title>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            display: ['"MyCustomFont"', '"DM Sans"', 'sans-serif'],
+          },
+          colors: {
+            accent: { DEFAULT: '#ec4899', dark: '#db2777' },
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-gray-900 ">
-  <header class="text-gray-600 body-font">
-    <div class="container mx-auto p-4 md:p-6 lg:p-12 h-full w-full flex">
-      <div
-        class="header-container color-change-3x w-full h-screen/4 bg-gradient-to-r from-gray-600 to-gray-900 rounded-lg shadow-md p-4 flex flex-wrap justify-between gap-x-2">
-        <a class="flex title-font font-my-custom-font text-black items-center text-white mb-4 md:mb-0">
-          <img src="logo.png" alt="Your Logo" class="w-9 h-6 inline-block mr-2" />
-          <span class="ml-3 text-black font-black text-2xl">Priyanshu Yadav</span>
-        </a>
-        <div class="flex justify-end">
-          <nav class="flex flex-wrap items-center text-base w-full">
-            <a
-              href="https://www.linkedin.com/in/priyanshu-yadav-a1232025a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg" alt="LinkedIn Logo"
-                class="w-6 h-6 inline-block mr-2" />
-              <span class="mr-4 text-black font-bold hover:text-blue-400 transition duration-300 ease-in-out">LinkedIn</span>
+<body class="min-h-screen bg-gray-950 text-gray-300 antialiased font-sans">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-pink-500 focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
+
+  <header class="sticky top-0 z-50 border-b border-gray-800/80 bg-gray-950/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+      <a href="#" class="group flex items-center gap-3 text-white no-underline">
+        <img src="photo.jpg" alt="Priyanshu Yadav" width="40" height="40" class="h-10 w-10 shrink-0 rounded-full object-cover ring-2 ring-gray-700 transition group-hover:ring-pink-500/50" />
+        <span class="font-display text-xl font-bold tracking-tight">Priyanshu Yadav</span>
+      </a>
+      <nav aria-label="Social links" class="w-full sm:w-auto">
+        <ul class="flex flex-wrap items-center justify-start gap-x-6 gap-y-3 sm:justify-end">
+          <li>
+            <a href="https://www.linkedin.com/in/priyanshu-yadav-a1232025a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="nav-social-link" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/linkedin.svg" alt="" class="nav-icon" width="20" height="20" />
+              <span>LinkedIn</span>
             </a>
-            <a href="https://github.com/Priyanshu9369">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="GitHub Logo"
-                class="w-6 h-6 inline-block mr-2" />
-              <span class="mr-4 text-black font-bold hover:text-green-400 transition duration-300 ease-in-out">GitHub</span>
+          </li>
+          <li>
+            <a href="https://github.com/Priyanshu9369" class="nav-social-link" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="" class="nav-icon" width="20" height="20" />
+              <span>GitHub</span>
             </a>
-            <a href="https://x.com/Priyanshu_Y7">
-              <svg viewBox="0 0 24 24" aria-hidden="true"
-                class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk w-6 h-6 inline-block mr-2">
-                <g>
-                  <path
-                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-                  </path>
-                </g>
+          </li>
+          <li>
+            <a href="https://leetcode.com/u/dJbmcRsuIB/" class="nav-social-link" target="_blank" rel="noopener noreferrer">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/leetcode.svg" alt="" class="nav-icon" width="20" height="20" />
+              <span>LeetCode</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://codolio.com/profile/Priyanshu9451" class="nav-social-link" target="_blank" rel="noopener noreferrer">
+              <svg class="nav-icon h-5 w-5 shrink-0 opacity-85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
               </svg>
-              <span class="mr-4 text-black font-bold hover:text-black transition duration-300 ease-in-out">Twitter</span>
+              <span>Codolio</span>
             </a>
-
-            <a href="https://www.instagram.com/rao_sahabpriyanshu_/">
-              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/instagram.svg" alt="Instagram Logo"
-                class="w-6 h-6 inline-block mr-2" />
-
-              <span class="mr-4 text-black font-bold hover:text-purple-600 transition duration-300 ease-in-out">Instagram</span>
-            </a>
-          </nav>
-        </div>
-      </div>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <section class="text-gray-400 bg-gray-900 body font">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-        <h1
-          class="sm:text-6xl text-2xl font-my-custom-font shimmer gradient-text font-black title-font mb-2 text-white">
-          WELCOME!!</h1>
+  <main id="main-content">
+    <section class="section-y border-b border-gray-800/60 bg-gradient-to-b from-gray-900/50 to-gray-950" aria-labelledby="hero-heading">
+      <div class="mx-auto max-w-6xl px-4 text-center sm:px-6 lg:px-8">
+        <p class="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-pink-400/90">Portfolio</p>
+        <h1 id="hero-heading" class="font-display shimmer text-4xl font-black text-white sm:text-5xl md:text-6xl">Welcome</h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg text-gray-400">CS student · I build web experiences, sharpen my craft in Java &amp; Python, and explore AI &amp; machine learning.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="text-gray-400 bg-gray-900 body-font">
-    <div class="container px-5 py-24 mx-auto flex flex-col">
-      <div class="lg:w-4/6 mx-auto">
-        <div class="flex flex-wrap w-full  flex-col items-center text-center">
-          <h1 class=" title-font text-6xl leading-relaxed font-medium text-white font-my-custom-font">
-            About Me
-          </h1>
-          <div class="h-1 w-20 bg-pink-500 rounded"></div>
+    <section id="about" class="section-y" aria-labelledby="about-heading">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <header class="mb-12 text-center">
+          <h2 id="about-heading" class="font-display text-3xl font-semibold text-white sm:text-4xl">About me</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </header>
+        <div class="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-12 xl:gap-16">
+          <aside class="flex w-full flex-col items-center text-center lg:w-72 lg:shrink-0 lg:items-start lg:text-left">
+            <div class="h-28 w-28 shrink-0 overflow-hidden rounded-full bg-gray-800 ring-2 ring-gray-700">
+              <img src="photo.jpg" alt="Portrait of Priyanshu Yadav" width="112" height="112" class="h-full w-full object-cover object-top" />
+            </div>
+            <h3 class="mt-6 text-xl font-semibold text-white">Priyanshu Yadav</h3>
+            <div class="mt-2 h-1 w-12 rounded-full bg-pink-500" aria-hidden="true"></div>
+            <p class="mt-4 max-w-sm text-gray-400">Computer Science and Engineering, Galgotias University</p>
+          </aside>
+          <div class="min-w-0 flex-1 border-gray-800 pt-0 lg:border-l lg:pl-10">
+            <div class="prose prose-invert prose-p:text-gray-300 max-w-none space-y-4">
+              <p class="m-0 text-lg leading-relaxed text-gray-300">
+                I&apos;m Priyanshu Yadav a Computer Science and Engineering student at Galgotias University.
+              </p>
+              <p class="m-0 text-lg leading-relaxed text-gray-300">
+                I enjoy building software that is fast, simple, and user friendly. I work across the stack from responsive web applications and creative front-end interfaces to structured Core Java programs.
+              </p>
+              <p class="m-0 text-lg leading-relaxed text-gray-300">
+                I have a strong interest in problem-solving, data structures, and how AI tools can support real-world products. I continuously improve my skills by building projects and solving coding problems.
+              </p>
+              <p class="m-0 text-lg leading-relaxed text-gray-300">
+                So far, I have worked on multiple projects and actively practice DSA to strengthen my logic and coding ability.
+              </p>
+              <p class="m-0 text-lg leading-relaxed text-gray-300">
+                When I&apos;m not coding, I explore new tech ideas, read about development trends, and connect with other developers.
+              </p>
+              <p class="m-0 text-lg leading-relaxed text-gray-300">
+                This portfolio reflects my work, skills, and journey as a developer.
+              </p>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="https://github.com/Priyanshu9369" class="inline-flex items-center gap-2 font-medium text-pink-400 transition hover:text-pink-300" target="_blank" rel="noopener noreferrer">
+                GitHub
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/priyanshu-yadav-a1232025a/?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=android_app" class="inline-flex items-center gap-2 font-medium text-gray-400 transition hover:text-pink-300" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="container px-5 py-24 mx-auto flex flex-col">
-            <div class="lg:w-4/6 mx-auto">
-              <div class="flex flex-col sm:flex-row">
-                <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
-                  <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-800 text-gray-600">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                      <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                  </div>
+    <section id="projects" class="section-y border-t border-gray-800/60 bg-gray-900/30" aria-labelledby="projects-heading">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <header class="mb-12 text-center">
+          <h2 id="projects-heading" class="font-display text-3xl font-semibold text-white sm:text-4xl">Projects</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </header>
 
-                  <div class="flex flex-col items-center text-center justify-center">
-                    <h2 class="font-open-sans-medium title-font mt-4 text-white text-lg">
-                      Priyanshu Yadav
-                    </h2>
-                    <div class="w-12 h-1 bg-pink-500 rounded mt-2 mb-4"></div>
-                    <p class="text-base text-gray-400">
-                      Computer science and engineering Galgotias University
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-800 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
-                  <p class="leading-relaxed text-lg text-xl mb-4">
-                    "Hello! This webPage is created during my internship at
-                    Octanet
-                    Services, where I'm immersed in web development alongside
-                    a
-                    talented team. In this blog, I'll share my experiences,
-                    insights, and adventures as I learn and grow. From
-                    contributing
-                    to exciting projects (some of which must remain top-secret
-                    for
-                    now) to overcoming coding challenges, I'll give you a
-                    behind-the-scenes look at life as a web development
-                    intern.
-                    Stay
-                    tuned for updates on my journey!"
-                  </p>
-                  <a href=" https://octanet.in/training-internship/"
-                    class="text-pink-400 inline-flex items-center">Learn
-                    more
-                    
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                      stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                      <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                  </a>
-                </div>
+        <div class="mb-14 grid gap-10 lg:grid-cols-2 lg:items-start">
+          <div>
+            <h3 class="font-display text-2xl font-semibold text-white">Representations</h3>
+            <div class="mt-2 h-1 w-16 rounded-full bg-pink-500" aria-hidden="true"></div>
+          </div>
+          <p class="text-lg leading-relaxed text-gray-400">
+            From commerce and systems to playful front-end experiences projects built to be clear, memorable, and easy to extend.
+          </p>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="card-project">
+            <a href="https://online-book-store-ebon.vercel.app/" class="block overflow-hidden rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-gray-950" target="_blank" rel="noopener noreferrer" aria-label="Open Online Book Store live demo">
+              <div class="flex h-48 w-full items-center justify-center bg-gradient-to-br from-indigo-950 via-gray-900 to-pink-950/40">
+                <span class="text-6xl drop-shadow-lg" aria-hidden="true">📚</span>
               </div>
+            </a>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-pink-400">Web app</p>
+            <h3 class="mt-1 text-xl font-semibold text-white">Online Book Store</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-400">
+              📚 Online Book Store – a modern web app to browse, search, and explore books online with a smooth and user-friendly interface 🚀✨
+            </p>
+            <div class="mt-4 flex flex-wrap gap-4">
+              <a href="https://online-book-store-ebon.vercel.app/" class="inline-flex items-center gap-2 text-sm font-medium text-pink-400 transition hover:text-pink-300" target="_blank" rel="noopener noreferrer">
+                Live demo
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" /></svg>
+              </a>
+              <a href="https://github.com/Priyanshu9369" class="inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition hover:text-pink-300" target="_blank" rel="noopener noreferrer">
+                GitHub
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </a>
             </div>
-          </div>
-          <div class="lg:w-full w-full justify-center">
-          </div>
-        </div>
-  </section>
-  <section class="text-gray-400 body-font bg-gray-900">
-    <div class="flex flex-wrap w-full mb-15 flex-col items-center text-center">
-      <h1 class="sm:text-6xl text-2xl font-my-custom-font font-medium title-font text-white mb-2">
-        Projects
-      </h1>
-      <div class="h-1 w-20 bg-pink-500 rounded"></div>
-    </div>
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap w-full mb-20">
-        <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-          <h1 class="sm:text-3xl text-2xl font-my-custom-font title-font mb-2 shimmer text-white">
-            Representations
-          </h1>
-          <div class="h-1 w-20 bg-pink-500 rounded"></div>
-        </div>
-        <p class="lg:w-1/2 w-full font-my-custom-font leading-relaxed text-2xl text-gray-400 pl-4">
-          "These are some projects that I have made before and during my
-          internship at Octanet Services, I had the opportunity to work
-          on
-          various projects, including:
-        
-      
+          </article>
 
-              
-            </h2>
-            <p class="leading-relaxed text-base">
-              <a href="https://github.com/Priyanshu9369/" class="text-pink-400 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg></a>
-
-            </p>
-          </div>
-        </div>
-        <div class="xl:w-1/4 md:w-1/2 p-4">
-          <div class="bg-gray-800 bg-opacity-40 p-6 rounded-lg">
-            <img class="h-45 rounded w-full object-cover object-center mb-6" src="/images/scizzFind.jpg"
-              alt="content" />
-            <h3 class="tracking-widest text-pink-400 text-xs font-medium title-font">
-              Salon Appointment System
-            </h3>
-            <h2 class="text-lg text-white font-medium title-font mb-4">
-              .ScizzFind
-            </h2>
-            <p class="leading-relaxed text-base">
-              "Scizzfind - Revolutionizing Salon Bookings
-
-              Scizzfind is an online platform connecting customers with salons and stylists, streamlining bookings and
-              enhancing the beauty experience. User-friendly, personalized, and convenient - making beauty and wellness
-              accessible for all."
-              <a href="https://github.com/Priyanshu9369" class="text-pink-400 inline-flex items-center">Learn More
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"></path>
-                </svg></a>   
-  </section>
-  <section class="text-gray-400 body-font bg-gray-900">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-        <h1 class="sm:text-6xl text-2xl font-my-custom-font font-medium title-font mb-2 text-white">Skills and
-          Experiences</h1>
-        <div class="h-1 w-20 bg-pink-500 rounded"></div>
-
-      
-              
-            </p>
-          </div>
-        </div>
-        
-        </div>
-        <div class="xl:w-1/3 md:w-1/2 p-4">
-          <div class="border border-gray-700 border-opacity-75 p-6 rounded-lg">
-            <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-pink-400 mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-robot"
-                viewBox="0 0 16 16">
-                <path
-                  d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135" />
-                <path
-                  d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5" />
+          <article class="card-project">
+            <div class="flex h-48 w-full items-center justify-center rounded-lg bg-gradient-to-br from-amber-950/50 via-gray-900 to-gray-950 ring-1 ring-gray-700/80" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-amber-500/90" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
-            <h2 class="text-lg text-white font-medium title-font mb-2">Artificial intelligence and Machine learning</h2>
-            <p class="leading-relaxed text-base">"Utilized machine learning algorithms and deep learning techniques to
-              drive innovative solutions
-              - Developed predictive models, natural language processing tools, and computer vision applications
-              - Some models are SNAP, PEPPER.ai, and others which are Powered by ChatGPT, Google Gemini, DALL-E, Copilot
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-pink-400">Core Java · CLI</p>
+            <h3 class="mt-1 text-xl font-semibold text-white">Student Management System</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-400">
+              🎓 A console-based Student Management System built using Core Java, featuring CRUD operations, clean MVC-style architecture, and a menu-driven interface to efficiently manage student records.
+            </p>
+            <a href="https://github.com/Priyanshu9369" class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-pink-400 transition hover:text-pink-300" target="_blank" rel="noopener noreferrer">
+              View on GitHub
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+            </a>
+          </article>
 
-              - Collaborated with cross-functional teams to integrate AI/ML capabilities into various projects."
+          <article class="card-project sm:col-span-2 sm:max-w-lg sm:justify-self-center lg:col-span-1 lg:max-w-none lg:justify-self-stretch">
+            <a href="https://priyanshu9369.github.io/birthday-story/" class="block overflow-hidden rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-gray-950" target="_blank" rel="noopener noreferrer" aria-label="Open Birthday Surprise website">
+              <div class="flex h-48 w-full items-center justify-center bg-gradient-to-br from-fuchsia-950/80 via-rose-900/40 to-amber-950/50">
+                <span class="text-6xl drop-shadow-lg" aria-hidden="true">🎂</span>
+              </div>
+            </a>
+            <p class="mt-4 text-xs font-semibold uppercase tracking-wider text-pink-400">Vanilla JS · Frontend</p>
+            <h3 class="mt-1 text-xl font-semibold text-white">Birthday Surprise Website</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-400">
+              🎂 Birthday Surprise Website 🎉 — A creative, interactive experience to make someone’s special day unforgettable: smooth animations, storytelling screens, background music with safe autoplay handling, and emotional surprises. Fully responsive with seamless, no-reload flow.
             </p>
-          </div>
-        </div>
-        <div class="xl:w-1/3 md:w-1/2 p-4">
-          <div class="border border-gray-700 border-opacity-75 p-6 rounded-lg">
-            <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-pink-400 mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 14 14">
-                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 13.5a6.5 6.5 0 1 0 0-13a6.5 6.5 0 0 0 0 13M.5 7h13" />
-                  <path
-                    d="M9.5 7A11.22 11.22 0 0 1 7 13.5A11.22 11.22 0 0 1 4.5 7A11.22 11.22 0 0 1 7 .5A11.22 11.22 0 0 1 9.5 7" />
-                </g>
-              </svg>
-            </div>
-            <h2 class="text-lg text-white font-medium title-font mb-2">WebDevelopment internship at TechOctanet</h2>
-            <p class="leading-relaxed text-base">"Contributed to building responsive, scalable, and secure web
-              applications
-              - Utilized HTML, CSS, JavaScript, and frameworks like React
-              - Collaborated with designers, product managers, and backend developers
-              - Implemented features, fixed bugs, and optimized performance
-              - FunFact this webPage is created as a part of this internship
-              - Participated in agile development, ensuring timely project delivery
-              - Applied best practices, following industry standards and trends"
-            </p>
-          </div>
-        </div>
-        <div class="xl:w-1/3 md:w-1/2 p-4">
-          <div class="border border-gray-700 border-opacity-75 p-6 rounded-lg">
-            <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-gray-800 text-pink-400 mb-4">
-              <img src="https://cdn.simpleicons.org/python/24" alt="Python Logo" width="24" height="24">
-            </div>
-            <h2 class="text-lg text-white font-medium title-font mb-2">Python Developer</h2>
-            <p class="leading-relaxed text-base">- Proficient in Python programming language, utilizing libraries like
-              NumPy, Pandas, and scikit-learn
-              - Developed scalable and efficient code for data analysis, visualization, and machine learning tasks
-              - Implemented data pipelines, web scraping, and API integrations
-              - Contributed to open-source projects, demonstrating commitment to community development
-            </p>
-          </div>
-        </div>
-       
-
            
+            <p class="mt-3 text-xs text-gray-600">Built with HTML5, CSS3, JavaScript (Vanilla JS)</p>
+            <div class="mt-4 flex flex-wrap gap-4">
+              <a href="https://priyanshu9369.github.io/birthday-story/" class="inline-flex items-center gap-2 text-sm font-medium text-pink-400 transition hover:text-pink-300" target="_blank" rel="noopener noreferrer">
+                Live demo
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" /></svg>
+              </a>
+              <a href="https://github.com/Priyanshu9369/birthday-story" class="inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition hover:text-pink-300" target="_blank" rel="noopener noreferrer">
+                Source
+                <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+              </a>
+            </div>
+          </article>
         </div>
-      </div><a href="https://drive.google.com/drive/folders/1MmRKU1fN9GbZigPPEaLCL52K9xSjtiOn?usp=sharing">
-        <button
-          class="flex mx-auto mt-16 text-white bg-pink-500 border-0 py-2 px-8 focus:outline-none hover:bg-pink-600 rounded text-lg">View
-          Certificates?</button>
-      </a>
-    </div>
-  </section>
-  
-      
-  </section>
-  <section class="text-gray-400 bg-gray-900 body-font">
-    <div class="container px-5 py-24 mx-auto">
-      <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-500 mb-8"
-          viewBox="0 0 975.036 975.036">
-          <path
-            d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
-          </path>
-        </svg>
-        <p class="leading-relaxed text-lg">"Code is the canvas of dreams, where imagination meets innovation. Every
-          line, a brushstroke of possibility. Every bug, a chance to create something extraordinary. Every solution, a
-          masterpiece of progress. Code fearlessly, dream boldly, and transform the world, one line at a time."
-        </p>
-        <span class="inline-block h-1 w-10 rounded bg-pink-500 mt-8 mb-6"></span>
-        <h2 class="text-white font-medium title-font tracking-wider text-sm">Priyanshu Yadav</h2>
-        <p class="text-gray-500">
+
+        <div class="mt-10 text-center">
+          <a href="https://github.com/Priyanshu9369/" class="inline-flex items-center gap-2 text-pink-400 transition hover:text-pink-300" target="_blank" rel="noopener noreferrer">
+            See all repositories
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+          </a>
+        </div>
       </div>
+    </section>
+
+    <section id="skills" class="section-y" aria-labelledby="skills-heading">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <header class="mb-12 text-center">
+          <h2 id="skills-heading" class="font-display text-3xl font-semibold text-white sm:text-4xl">Skills &amp; experience</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </header>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <article class="card-skill">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="text-pink-400" viewBox="0 0 16 16">
+                <path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135" />
+                <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white">AI &amp; machine learning</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-400">
+              I work with machine learning and deep learning for prediction, NLP, and computer vision. I’ve experimented with models and workflows (including tools like SNAP and PEPPER.ai) and I use modern AI APIs—ChatGPT, Gemini, DALL·E, Copilot—where they fit the problem. I like pairing models with clean integration and clear evaluation, not hype.
+            </p>
+          </article>
+
+          <article class="card-skill">
+            <div class="icon-wrap" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="text-pink-400">
+                <path d="M7 13.5a6.5 6.5 0 1 0 0-13a6.5 6.5 0 0 0 0 13M.5 7h13" />
+                <path d="M9.5 7A11.22 11.22 0 0 1 7 13.5A11.22 11.22 0 0 1 4.5 7A11.22 11.22 0 0 1 7 .5A11.22 11.22 0 0 1 9.5 7" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white">Web development</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-400">
+              I design and ship responsive interfaces with HTML, CSS, JavaScript, and React—plus vanilla JS when I want full control over animations and performance. I’ve built deployed projects (including this portfolio), focused on accessibility, layout, and a smooth experience on mobile and desktop. I’m comfortable iterating fast, fixing bugs, and polishing details until it feels right.
+            </p>
+          </article>
+
+          <article class="card-skill md:col-span-2 lg:col-span-1">
+            <div class="icon-wrap" aria-hidden="true">
+              <img src="https://cdn.simpleicons.org/python/EC4899" alt="" width="24" height="24" />
+            </div>
+            <h3 class="text-lg font-semibold text-white">Python &amp; core Java</h3>
+            <p class="mt-3 text-sm leading-relaxed text-gray-400">
+              In Python I use NumPy, Pandas, and scikit-learn for analysis, small ML tasks, scripts, and APIs. In Core Java I’m comfortable with object-oriented design, CRUD-style apps, and console tools with a clear MVC-style layout—like my student management system. I aim for readable code and sensible structure, whether it’s a script or a full menu-driven program.
+            </p>
+          </article>
+        </div>
+
+        <div class="mt-14 flex justify-center">
+          <a href="https://drive.google.com/drive/folders/1MmRKU1fN9GbZigPPEaLCL52K9xSjtiOn?usp=sharing" class="rounded-lg bg-pink-500 px-8 py-3 text-base font-medium text-white shadow-lg shadow-pink-500/20 transition hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-gray-950" target="_blank" rel="noopener noreferrer">
+            View certificates
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-y border-t border-gray-800/60 bg-gray-900/20" aria-labelledby="quote-heading">
+      <div class="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+        <h2 id="quote-heading" class="sr-only">Inspiration</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="mx-auto mb-8 h-10 w-10 text-gray-600" viewBox="0 0 975.036 975.036" aria-hidden="true">
+          <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z" />
+        </svg>
+        <blockquote>
+          <p class="text-lg italic leading-relaxed text-gray-300 md:text-xl">
+            Code is the canvas of dreams, where imagination meets innovation. Every line, a brushstroke of possibility. Every bug, a chance to create something extraordinary.
+          </p>
+        </blockquote>
+        <div class="mx-auto mt-8 h-1 w-12 rounded-full bg-pink-500" aria-hidden="true"></div>
+        <p class="mt-6 text-sm font-medium uppercase tracking-wider text-gray-500">Priyanshu Yadav</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-gray-800 bg-gray-950">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 py-8 sm:flex-row sm:px-6 lg:px-8">
+      <p class="text-center text-sm text-gray-500 sm:text-left">© 2026 Priyanshu Yadav. All rights reserved.</p>
+      <nav aria-label="Footer social">
+        <ul class="flex flex-wrap items-center justify-center gap-4 sm:justify-end">
+          <li>
+            <a href="https://www.linkedin.com/in/priyanshu-yadav-a1232025a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="footer-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <svg fill="currentColor" class="h-5 w-5 opacity-70" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Priyanshu9369" class="footer-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="" width="22" height="22" class="opacity-70" />
+            </a>
+          </li>
+          <li>
+            <a href="https://leetcode.com/u/dJbmcRsuIB/" class="footer-icon" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+              <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/leetcode.svg" alt="" width="22" height="22" class="opacity-70" />
+            </a>
+          </li>
+          <li>
+            <a href="https://codolio.com/profile/Priyanshu9451" class="footer-icon" target="_blank" rel="noopener noreferrer" aria-label="Codolio coding dashboard">
+              <svg class="h-5 w-5 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </footer>
 </body>
-<footer class="text-gray-400 bg-gray-900 body-font">
-  <div
-    class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
-    </div>
-  </div>
-  <div class="bg-gray-800 bg-opacity-75">
-    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-400 text-sm text-center sm:text-left">© 2024 priyanshu yadav— JaiShreeRam:D</a>
-      </p>
-      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-        <a href="https://github.com/Priyanshu9369" class="text-gray-400">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v7/icons/github.svg" alt="GitHub Logo"
-            class="w-6 h-6 inline-block mr-2" />
-        </a>
-        <a href="https://x.com/Priyanshu9369" class="ml-3 text-gray-400">
-          <svg viewBox="0 0 24 24" aria-hidden="true"
-            class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-lrvibr r-m6rgpd r-lrsllp r-1nao33i r-16y2uox r-8kz0gk w-5 h-5 inline-block ">
-            <g>
-              <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
-              </path>
-            </g>
-          </svg>
-        </a>
-        <a href="https://www.instagram.com/rao_sahabpriyanshu_" class="ml-3 text-black">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            class="w-5 h-5" viewBox="0 0 24 24">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-          </svg>
-        </a>
-
-
-        <a href="https://www.linkedin.com/in/priyanshu-yadav-a1232025a/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          class="ml-3 text-black">
-          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0"
-            class="w-5 h-5" viewBox="0 0 24 24">
-            <path stroke="none"
-              d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-            <circle cx="4" cy="4" r="2" stroke="none"></circle>
-          </svg>
-        </a>
-      </span>
-    </div>
-  </div>
-</footer>
 
 </html>

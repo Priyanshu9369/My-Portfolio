@@ -1,100 +1,142 @@
 @font-face {
-    font-family: 'MyCustomFont';
-    src: url('/fonts/Mainlux-Light.otf') format('woff2');
+  font-family: "MyCustomFont";
+  src: url("fonts/Mainlux-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-my-custom-font,
+.font-display {
+  font-family: "MyCustomFont", "DM Sans", system-ui, sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #ff045c, #ff009d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero “Welcome” shimmer — single consolidated rule */
+.shimmer {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+  font-family: "MyCustomFont", "DM Sans", Arial, sans-serif;
+  font-weight: 300;
+  background: linear-gradient(
+    90deg,
+    #cb0954 0%,
+    #fc02f8 50%,
+    #fbb45e 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-shift 6s ease-in-out infinite;
+}
+
+@keyframes shimmer-shift {
+  0%,
+  100% {
+    background-position: 0% center;
   }
-  .font-my-custom-font {
-    font-family: 'MyCustomFont', sans-serif;
+  50% {
+    background-position: 100% center;
   }
-  .gradient-text {
-    background: linear-gradient(to right, #ef0077, #e9abca);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+.section-y {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section-y {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
-  
-  
-  
-  .header {
-    background-color: #f7f7f7;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .logo {
-    display: inline-flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .logo svg {
-    width: 40px;
-    height: 40px;
-    fill: #fff;
-    background-color: red;
-    border-radius: 50%;
-    padding: 10px;
-  }
-  
-  .logo-text {
-    font-size: 24px;
-    margin-left: 10px;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .nav-link {
-    margin-right: 20px;
-    color: #337ab7;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .nav-link:hover {
-    color: pink-700;
-  }
-  
-  .nav-link svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    fill: #337ab7;
-  }
-  
-  .button {
-    background-color: #f7f7f7;
-    border: none;
-    padding: 100px 200px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .button:hover {
-    background-color: #f2f2f2;
-  }
-  
-  .button svg {
-    width: 20px;
-    height: 20px;
-    margin-left: 10;
-  }
-  
-  .rainbow-hover:hover {
-    background-image: linear-gradient(to right, #ff69b4, #ff99cc, #ffc0cb, #ffff66, #99ff99, #66ccff, #3399ff);
-    background-size: 100% 2px;
-    background-position: 0% 100%;
-    transition: background-position 0.3s ease-out;
-  }
-  
-  .rainbow-hover:hover span {
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .linkedin-anchor {
-    @apply rainbow-hover;
-  }
+}
+
+.section-rule {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  height: 0.25rem;
+  width: 5rem;
+  border-radius: 9999px;
+  background-color: #ec4899;
+}
+
+.nav-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-social-link:hover {
+  color: #f472b6;
+}
+
+.nav-icon {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.card-project {
+  border-radius: 0.75rem;
+  border: 1px solid rgb(31 41 55 / 0.9);
+  background: rgb(17 24 39 / 0.5);
+  padding: 1.25rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-project:hover {
+  border-color: rgb(55 65 81);
+  box-shadow: 0 20px 40px -24px rgb(236 72 153 / 0.25);
+}
+
+.card-skill {
+  border-radius: 0.75rem;
+  border: 1px solid rgb(55 65 81 / 0.75);
+  background: rgb(17 24 39 / 0.4);
+  padding: 1.5rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.card-skill:hover {
+  border-color: rgb(75 85 99);
+  background: rgb(17 24 39 / 0.65);
+}
+
+.icon-wrap {
+  display: inline-flex;
+  height: 2.75rem;
+  width: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: rgb(31 41 55);
+  margin-bottom: 1rem;
+}
+
+.footer-icon {
+  color: #9ca3af;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-icon:hover {
+  color: #f472b6;
+}
+
+.footer-icon:hover img,
+.footer-icon:hover svg {
+  opacity: 1 !important;
+}

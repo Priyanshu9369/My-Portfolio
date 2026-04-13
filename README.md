@@ -26,7 +26,7 @@ Through these projects, I explored different technologies and improved my practi
 Clone the repository:
 
 ```
-git clone https://github.com/Priyanshu9369/Octanet-August
+git clone https://github.com/Priyanshu9369/My-Portfolio
 ```
 
 Navigate to any project or assignment folder and follow the instructions in the respective `README.md` files to run or understand the code.

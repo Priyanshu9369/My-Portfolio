@@ -103,6 +103,10 @@
   box-shadow: 0 20px 40px -24px rgb(236 72 153 / 0.25);
 }
 
+.certificate-card.card-project {
+  padding: 0;
+}
+
 .card-skill {
   border-radius: 0.75rem;
   border: 1px solid rgb(55 65 81 / 0.75);
@@ -140,3 +144,31 @@
 .footer-icon:hover svg {
   opacity: 1 !important;
 }
+
+/* Certificate lightbox */
+.certificate-modal {
+  margin: auto;
+  max-width: min(96vw, 56rem);
+  width: 100%;
+  padding: 0;
+  border: 1px solid rgb(55 65 81);
+  border-radius: 0.75rem;
+  background: rgb(17 24 39);
+  color: inherit;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+}
+
+.certificate-modal::backdrop {
+  background: rgb(0 0 0 / 0.88);
+  backdrop-filter: blur(4px);
+}
+
+.certificate-modal[open] {
+  display: block;
+}
+
+.certificate-thumb {
+  cursor: zoom-in;
+}
+
+
